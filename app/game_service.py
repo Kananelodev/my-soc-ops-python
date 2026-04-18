@@ -55,7 +55,6 @@ class GameSession:
         self.game_state = GameState.PLAYING
 
 
-# In-memory session store keyed by session ID
 _sessions: dict[str, GameSession] = {}
 
 

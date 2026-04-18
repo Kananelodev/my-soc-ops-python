@@ -4,8 +4,8 @@ import random
 from app.data import FREE_SPACE, QUESTIONS
 from app.models import BingoLine, BingoSquareData
 
-BOARD_SIZE = 5
-CENTER_INDEX = 12  # 5x5 grid, center is index 12 (row 2, col 2)
+BOARD_SIZE: int = 5
+CENTER_INDEX: int = 12
 
 
 def generate_board() -> list[BingoSquareData]:
@@ -37,7 +37,7 @@ def _get_winning_lines() -> tuple[BingoLine, ...]:
     lines: list[BingoLine] = []
 
     for row in range(BOARD_SIZE):
-        squares = [row * BOARD_SIZE + col for col in range(BOARD_SIZE)]
+        squares: list[int] = [row * BOARD_SIZE + col for col in range(BOARD_SIZE)]
         lines.append(BingoLine(type="row", index=row, squares=squares))
 
     for col in range(BOARD_SIZE):

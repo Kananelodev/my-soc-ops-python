@@ -28,5 +28,10 @@ line-length = 88
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "W"]
 
+[tool.ruff.lint.isort]
+# Configure import sorting
+known-first-party = ["app"]
+
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
